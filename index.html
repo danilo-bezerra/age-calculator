@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+
+  <title>Age calculator app</title>
+
+  <link rel="stylesheet" href="styles/main.css">
+</head>
+
+<body>
+
+
+
+  <section class="calculator">
+    <form id="age-form" class="form">
+      <div class="input-row">
+        <label>
+          DAY
+          <input id="day" name="day" type="number" placeholder="DD">
+          <span id="day-error-message" class="form-error-message">
+            Must be a valid day
+          </span>
+        </label>
+
+        <label>
+          MONTH
+          <input id="month" name="month" type="number" placeholder="MM">
+          <span id="month-error-message" class="form-error-message">
+            Must be a valid day
+          </span>
+        </label>
+
+        <label> YEAR
+
+          <input id="year" name="year" type="number" placeholder="YYYY ">
+          <span id="year-error-message" class="form-error-message">
+            Must be a valid day
+          </span>
+        </label>
+
+      </div>
+      <span id="form-error-message" class="form-error-message">
+        Must be a valid day
+      </span>
+      <div class="bottom-row">
+        <hr><button><img src="assets/images/icon-arrow.svg" alt=""></button>
+      </div>
+    </form>
+
+    <div class="calculator-results">
+      <p class="calculator__result"> <span id="result_years">--</span>years</p>
+      <p class="calculator__result"> <span id="result_months">--</span>months</p>
+      <p class="calculator__result"> <span id="result_days">--</span>days</p>
+    </div>
+  </section>
+
+  <script src="scripts/main.js"></script>
+</body>
+
+</html>

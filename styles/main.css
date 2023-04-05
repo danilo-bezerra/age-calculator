@@ -1,0 +1,247 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root {
+    --clr-purple: #854dff;
+    --clr-light-red: hsl(0, 100%, 67%);
+
+    --clr-white: hsl(0, 0%, 100%);
+    --clr-off-white: hsl(0, 0%, 94%);
+    --clr-white-grey: hsl(0, 0%, 86%);
+    --clr-smokey-grey: hsl(0, 1%, 44%);
+    --clr-off-black: hsl(0, 0%, 8%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    border: none;
+    outline: none;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--clr-white-grey);
+    min-height: 100vh;
+    padding: 1rem;
+}
+
+label {
+    color: var(--clr-smokey-grey);
+    font-weight: 700;
+    font-size: 14px;
+}
+
+input {
+    height: 70px;
+    width: 10rem;
+    padding: 0 1.625rem;
+    font-size: 2rem;
+    font-weight: 700;
+    border: 1px solid var(--clr-white-grey);
+    border-radius: .5rem;
+    max-width: fit-content;
+}
+
+input.invalid {
+    border-color: var(--clr-light-red);
+}
+
+button {
+    cursor: pointer;
+}
+
+
+.calculator {
+    background-color: var(--clr-white);
+    padding: 3.5rem;
+    width: 100%;
+    max-width: 840px;
+    border-radius: 1.5rem;
+    border-bottom-right-radius: 10rem;
+    box-shadow: 5px 5px 15px 2px #0001;
+}
+
+.form {}
+
+.form .input-row {
+    display: flex;
+    gap: 32px;
+}
+
+.form .input-row input {
+    margin-top: 1rem;
+    margin-bottom: .5rem;
+}
+
+.form .input-row label {
+    display: flex;
+    flex-direction: column;
+}
+
+.form .bottom-row {
+    display: flex;
+    align-items: center;
+}
+
+.form .bottom-row hr {
+    width: 100%;
+    height: 1px;
+    background-color: var(--clr-smokey-grey);
+}
+
+.form .bottom-row button {
+    background-color: var(--clr-purple);
+    border-radius: 100%;
+    aspect-ratio: 1;
+    width: 90px;
+}
+
+.form .form-error-message {
+    display: none;
+    color: var(--clr-light-red);
+    font-weight: normal;
+    font-size: .8rem;
+}
+
+.form .form-error-message.active {
+    display: block;
+    padding-bottom: .5rem;
+}
+
+.calculator_results {}
+
+.calculator-results .calculator__result {
+    color: var(--clr-off-black);
+    font-size: 104px;
+    font-weight: 900;
+    line-height: 114px;
+}
+
+.calculator-results .calculator__result span {
+    color: var(--clr-purple);
+    margin-right: 1rem;
+}
+
+@media (max-width: 1200px) {
+
+    input {
+        height: 50px;
+        width: 8.3rem;
+        font-size: 1.3rem;
+    }
+
+    .calculator {
+        max-width: 600px;
+    }
+
+    .form .input-row input {
+        margin-top: .35rem;
+        margin-bottom: .3rem;
+    }
+
+    .form .form-error-message {
+        font-size: .7rem;
+    }
+
+    .calculator-results .calculator__result {
+        color: var(--clr-off-black);
+        font-size: 72px;
+        font-weight: 900;
+        line-height: 90px;
+    }
+
+    .form .bottom-row {
+        margin: 1rem 0;
+    }
+
+    .form .bottom-row button {
+        width: 70px;
+    }
+
+    .form .bottom-row button img {
+        width: 60%;
+    }
+}
+
+@media (max-width: 768px) {
+    label {
+        font-size: 13px;
+    }
+
+    input {
+        height: 44px;
+        width: 6rem;
+        font-size: 1.1rem;
+        padding: .5rem;
+    }
+
+    .calculator {
+        width: 100%;
+
+    }
+
+    .calculator-results .calculator__result {
+        font-size: 4rem;
+        line-height: 1.5;
+    }
+
+    .form .bottom-row button {
+        width: 60px;
+    }
+}
+
+@media (max-width: 500px) {
+
+    label {
+        font-size: 12px;
+    }
+
+    input {
+        height: 40px;
+        width: 5rem;
+        font-size: 1rem;
+        padding: .5rem;
+    }
+
+    .calculator {
+        max-width: 100%;
+        padding: 2rem;
+        border-bottom-right-radius: 5rem;
+
+    }
+
+    .form .input-row input {
+        margin-top: .35rem;
+        margin-bottom: .3rem;
+    }
+
+    .form .form-error-message {
+        font-size: .6rem;
+    }
+
+    .calculator-results .calculator__result {
+        font-size: 40px;
+        line-height: 1.5;
+    }
+
+    .form .input-row {
+        display: flex;
+        gap: .75rem;
+    }
+
+    .form .bottom-row {
+        margin: 1rem 0;
+    }
+
+    .form .bottom-row button {
+        width: 60px;
+    }
+
+    .form .bottom-row button img {
+        width: 60%;
+    }
+}
